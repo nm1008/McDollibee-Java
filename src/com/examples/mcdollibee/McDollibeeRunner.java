@@ -19,6 +19,7 @@ public class McDollibeeRunner {
         }else if(choose == 2) {
         	drinks.execute();
         }else {
+        	System.out.println("Thank you for dining with us");
         	return;
         }
 	}
