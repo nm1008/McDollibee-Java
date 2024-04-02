@@ -9,19 +9,20 @@ public class McDollibeeRunner {
 		McDollibeeMenu.Menu();
 		McDollibeeSandwich sandwich = new McDollibeeSandwich();
 		McDollibeeDrinks drinks = new McDollibeeDrinks();
-	
+
 		System.out.println("Input the number you want to choose");
 		Scanner input = new Scanner(System.in);
-        short choose = input.nextShort();
-        
-        if(choose == 1) {
-        	sandwich.execute();
-        }else if(choose == 2) {
-        	drinks.execute();
-        }else {
-        	System.out.println("Thank you for dining with us");
-        	return;
-        }
+		int choose = input.nextInt();
+
+		if (choose == 1) {
+			sandwich.executeSandwich();
+		} else if (choose == 2) {
+			drinks.executeDrinks();
+		} else {
+			System.out.println("Transaction was cancelled");
+			System.out.println("Thank you for dining with us");
+			return;
+		}
 	}
 
 }
